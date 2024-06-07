@@ -39,7 +39,7 @@ body {
 .menu_bar {
     display: flex;
     height: fit-content;
-    width: fit-content;
+    width: 7%;
     height: 100%;
     flex-direction: column;
     padding-top: 10px;
@@ -93,6 +93,8 @@ body {
     opacity: 100%;
     transition: 1s;
 }
+
+
 #welcome_message {
     font-family: "Quicksand", sans-serif;
     font-size: 5em;
@@ -129,27 +131,30 @@ body {
 .proj_page {
     padding: 0;
     position: absolute;
-    max-width: 100%;
     width: 100%;
     height: fit-content;
-    background-color: #f6f6f6;
-    top: 300vh;
-    /* transition: 2s; */
+    min-height: 100%;
+    background-color: white;
+    top: -300vh;
     overflow-x: hidden;
     left: 0;
+    justify-content: center;
 }
 #project_container {
-    width: 90%;
+    width: 90vw;
+    max-width: 90vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction:row;
     gap: 30px;
     justify-content: center;
-    max-width: 90vw;
     padding-bottom: 5vh;
-    width: fit-content;
-    border: solid black;
     margin-top: 30px;
+    border: solid black;
+}
+.proj_page.open {
+    top: 0;
+    transition: 2s;
 }
 #project_container > div:nth-child(odd)  { 
     background-color: blue;
@@ -172,8 +177,87 @@ body {
     background-size: cover;
     background-position: center;
 }
-.projects_box .Proj_two {
+#project_container .Proj_two {
     background-image: url("../Images/class_proj.png");
     background-size: cover;
     background-position: center;
+}
+#project_container > div:hover:nth-child(odd) + div:nth-child(even) {
+    opacity: 1;
+}
+#project_container {
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+}
+#project_container p {
+    font-size: 1.1em;
+}
+
+/* -----------------------------------------------project icons-------------------------------------------------------------*/
+
+button {
+    background: none;
+    border: none;
+}
+.techstack .django {
+    background-color: #092E20;
+    color: white;
+    border: solid 2px white;
+}
+.techstack .html {
+    background: linear-gradient(to right, #e34c26 0%, #e34c26 50%, #f06529 50%, #f06529 100% );
+    color: #ebebeb;
+    border: solid 2px #e34c26;
+}
+.techstack .css {
+    background: linear-gradient(to right, #264de4 0%, #264de4 50%, #2965f1 50%, #2965f1 100% );
+    color: #ebebeb;
+    border: solid 2px #264de4;
+}
+.techstack .python {
+    background: linear-gradient(to right, #4584b6 0%, #4584b6 50%, #ffde57 50%, #ffde57 100% );
+    color: #646464;
+    border: solid 2px #4584b6;
+}
+.techstack .openai {
+    background-color: #34A853;
+    color: white;
+    border: solid 2px #1A73E8
+}
+
+.techstack .php {
+    background-color: #8993be;
+    color: black;
+    text-shadow: 1px 1px 0 white;
+    border: solid 2px #484C89;
+}
+.techstack .javas {
+    background-color: #f0db4f;
+    color: #323330;
+}
+
+.techstack .itunes {
+    background: linear-gradient(to  bottom right, #fa57c1 , #b166cc , #7572ff, #69a6f9);
+    color: white;
+}
+.techstack .aws {
+    background-color: #f2f2f2;
+    color: #232f3e;
+    border: solid 4px #ff9900;
+}
+.techstack .aws {
+    background-color: #f2f2f2;
+    color: #232f3e;
+    border: solid 4px #ff9900;
+}
+.techstack .csharp {
+    background: linear-gradient(to bottom right, #9b4993 0%, #9b4993 33%, #823085 33%, #823085 66%, #682876 66%, #682876 100%);
+    color: #ffffff;
+}
+.techstack .unity {
+    background: linear-gradient(to bottom right, #959595 0%, #959595 33%, #626262 33%, #626262 66%, #000000 66%, #000000 100%);
+    color: #ffffff;
 }

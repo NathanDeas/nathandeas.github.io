@@ -7,35 +7,45 @@ const hb = document.querySelector("#head_button");
 
 var expanded = false;
 
-expand.addEventListener("click", () => {
-    if(expanded == false){
-        expand.innerHTML = "Close";
-        proj.classList.add("show");
-        proj.style.transform = "translateY(100px)";
-        cont.classList.add("show");
-        cont.style.transform = "translateY(400px)";
-        skills.classList.add("show");
-        skills.style.transform = "translateY(200px)";
-        resume.classList.add("show");
-        resume.style.transform = "translateY(300px)";
-        hb.classList.add("show");
+function toggleElement(element, transformValue, action) {
+    if (action === 'show') {
+        element.classList.add("show");
+        element.style.transform = `translateY(${transformValue})`;
+    } else {
+        element.classList.remove("show");
+        element.style.transform = "translateY(0)";
     }
-    else{
+}
+
+expand.addEventListener("click", () => {
+    if (expanded) {
         expand.innerHTML = "Menu";
-        proj.classList.remove("show");
-        proj.style.transform = "translateY(0)";
-        cont.classList.remove("show");
-        cont.style.transform = "translateY(0)";
-        skills.classList.remove("show");
-        skills.style.transform = "translateY(0)";
-        resume.classList.remove("show");
-        resume.style.transform = "translateY(0)";
+        toggleElement(proj, "0", "hide");
+        toggleElement(cont, "0", "hide");
+        toggleElement(skills, "0", "hide");
+        toggleElement(resume, "0", "hide");
         hb.classList.remove("show");
+    } else {
+        expand.innerHTML = "Close";
+        toggleElement(proj, "100px", "show");
+        toggleElement(cont, "400px", "show");
+        toggleElement(skills, "200px", "show");
+        toggleElement(resume, "300px", "show");
+        hb.classList.add("show");
     }
     expanded = !expanded;
 });
 
+var p_open = false;
 const proj_page = document.querySelector(".proj_page");
+const menu_box = document.querySelector(".menu_bar");
 proj.addEventListener("click", () => {
-    proj_page.style.top = "0";
+        proj_page.classList.add("open");
+        expand.innerHTML = "Menu";
+        toggleElement(proj, "0", "hide");
+        toggleElement(cont, "0", "hide");
+        toggleElement(skills, "0", "hide");
+        toggleElement(resume, "0", "hide");
+        hb.classList.remove("show");
+        menu_box.style = "opacity: 0; transition: 1s;";
 })

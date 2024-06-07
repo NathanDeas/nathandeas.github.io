@@ -46,6 +46,20 @@ proj.addEventListener("click", () => {
         toggleElement(cont, "0", "hide");
         toggleElement(skills, "0", "hide");
         toggleElement(resume, "0", "hide");
+        expanded = !expanded;
         hb.classList.remove("show");
         menu_box.style = "opacity: 0; transition: 1s;";
+})
+
+const close_page = document.querySelector(".close_page");
+close_page.addEventListener("click", () => {
+    proj_page.classList.remove("open");
+    expand.innerHTML = "Close";
+    toggleElement(proj, "100px", "show");
+    toggleElement(cont, "400px", "show");
+    toggleElement(skills, "200px", "show");
+    toggleElement(resume, "300px", "show");
+    hb.classList.add("show");
+    menu_box.style = "opacity: 100%; transition: 1s;";
+    expanded = !expanded;
 })

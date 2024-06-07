@@ -128,17 +128,30 @@ body {
     border-radius: 40%;
     align-content: center;
 }
+
+
+.close_page {
+    position: absolute;
+    border: solid black;
+    right: 20px;
+    top: 10px;
+    font-size: 2em;
+}
+
+
 .proj_page {
-    padding: 0;
+    display: flex;
     position: absolute;
     width: 100%;
+    min-width: 100%;
     height: fit-content;
     min-height: 100%;
-    background-color: white;
+    background-color: #578B80;
     top: -300vh;
-    overflow-x: hidden;
     left: 0;
     justify-content: center;
+    visibility: hidden;
+    transition: 1s;
 }
 #project_container {
     width: 90vw;
@@ -146,15 +159,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction:row;
-    gap: 30px;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-bottom: 5vh;
-    margin-top: 30px;
-    border: solid black;
+    margin-top: 70px;
+    gap: 10px 5px;
+    align-content: stretch;
 }
 .proj_page.open {
     top: 0;
     transition: 2s;
+    visibility: visible;
 }
 #project_container > div:nth-child(odd)  { 
     background-color: blue;
@@ -164,13 +178,13 @@ body {
     max-width: 90vw;
 }
 #project_container > div:nth-child(even)  { 
-    background-color: grey;
     color: black;
-    height: fit-content;
+    height: 275px;
     width: 550px;
     transition: .5s;
     max-width: 90vw;
     opacity: 60%;
+
 }
 #project_container .Proj_one {
     background-image: url("../Images/Hackathon_Project.png");
@@ -182,26 +196,33 @@ body {
     background-size: cover;
     background-position: center;
 }
+#project_container > div:hover:nth-child(odd) {
+    background-color: white;
+    transform: scale(1.03);
+    transition: .5s;
+    opacity: 1;
+}
 #project_container > div:hover:nth-child(odd) + div:nth-child(even) {
     opacity: 1;
 }
-#project_container {
+#project_container p {
+    font-size: 1.1em;
+}
+.techstack {
     font-size: 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px 10px;
+    text-align: center;
 }
-#project_container p {
-    font-size: 1.1em;
+.techstack span{
+    padding: 5px;
+    border-radius: 10px;
 }
 
 /* -----------------------------------------------project icons-------------------------------------------------------------*/
 
-button {
-    background: none;
-    border: none;
-}
 .techstack .django {
     background-color: #092E20;
     color: white;

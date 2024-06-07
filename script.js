@@ -63,3 +63,11 @@ close_page.addEventListener("click", () => {
     menu_box.style = "opacity: 100%; transition: 1s;";
     expanded = !expanded;
 })
+
+const contact = document.querySelector("#contact-container");
+cont.addEventListener("click", () => {
+    contact.classList.add("show");
+});
+contact.addEventListener("click", () => {
+    contact.classList.remove("show");
+})

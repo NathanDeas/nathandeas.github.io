@@ -83,6 +83,13 @@ body {
     visibility: hidden;
     opacity: 0%;
 }
+#proj_btn:hover,
+#cont_btn:hover,
+#skills_btn:hover,
+#resume_btn:hover
+{
+    cursor: pointer;
+}
 #proj_btn.show,
 #cont_btn.show,
 #skills_btn.show,
@@ -282,3 +289,46 @@ body {
     background: linear-gradient(to bottom right, #959595 0%, #959595 33%, #626262 33%, #626262 66%, #000000 66%, #000000 100%);
     color: #ffffff;
 }
+
+/* -----------------------------------------------Skills section-------------------------------------------------------------*/
+#contact-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 30, 53, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    visibility: hidden;
+    opacity: 0;
+}
+#contact-container.show {
+    visibility: visible;
+    opacity: 100%;
+    transition: .3s;
+}
+
+#contact-info {
+    border: green solid 5px;
+    width: 500px;
+    height: 400px;
+    background-color: #639096;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#contact-info img{
+    height: 200px;
+    border-radius: 20px;
+}
+
+
+
+
+

@@ -37,5 +37,5 @@ expand.addEventListener("click", () => {
 
 const proj_page = document.querySelector(".proj_page");
 proj.addEventListener("click", () => {
-    proj_page.style.transform = "translateY(200vh)";
+    proj_page.style.top = "0";
 })

@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     background-color: #15182C;
 }
 #nametag {
@@ -15,6 +15,8 @@ body {
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
+    height: fit-content;
 }
 .landing_page {
     height: fit-content;
@@ -125,10 +127,53 @@ body {
     align-content: center;
 }
 .proj_page {
+    padding: 0;
     position: absolute;
+    max-width: 100%;
     width: 100%;
-    height: 200vh;
+    height: fit-content;
+    background-color: #f6f6f6;
+    top: 300vh;
+    /* transition: 2s; */
+    overflow-x: hidden;
+    left: 0;
+}
+#project_container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    gap: 30px;
+    justify-content: center;
+    max-width: 90vw;
+    padding-bottom: 5vh;
+    width: fit-content;
+    border: solid black;
+    margin-top: 30px;
+}
+#project_container > div:nth-child(odd)  { 
     background-color: blue;
-    top: -200vh;
-    transition: 3s;
+    height: 275px;
+    width: 550px;
+    transition: .5s;
+    max-width: 90vw;
+}
+#project_container > div:nth-child(even)  { 
+    background-color: grey;
+    color: black;
+    height: fit-content;
+    width: 550px;
+    transition: .5s;
+    max-width: 90vw;
+    opacity: 60%;
+}
+#project_container .Proj_one {
+    background-image: url("../Images/Hackathon_Project.png");
+    background-size: cover;
+    background-position: center;
+}
+.projects_box .Proj_two {
+    background-image: url("../Images/class_proj.png");
+    background-size: cover;
+    background-position: center;
 }

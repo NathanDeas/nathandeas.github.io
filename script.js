@@ -77,4 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 contact.classList.remove("show");
             }
     });
+    resume.addEventListener("click", () => {
+        window.open("Images/Resume_Nathan_Deas.pdf", "_blank");
+    });
 });

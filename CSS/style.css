@@ -120,7 +120,7 @@ body {
 }
 #about span {
     font-size: 3em;
-    text-shadow: 2px 2px #ED634F;
+    text-shadow: 2px 2px 1px #ED634F;
 }
 .img {
     height: fit-content;
@@ -175,7 +175,7 @@ body {
 }
 .proj_page.open {
     top: 0;
-    transition: 2s;
+    transition: 1.5s;
     visibility: visible;
 }
 #project_container {
@@ -186,6 +186,11 @@ body {
     height: fit-content;
     margin-bottom: 50px;
 }
+#project_container .page_title {
+    text-shadow: 2px 2px 1px #FBF9F1;
+
+    
+}
 #project_box {
     display: flex;
     flex-direction: row;
@@ -193,8 +198,7 @@ body {
     height: fit-content;
     flex-wrap: wrap;
     margin-top: 50px;
-    gap: 20px
-
+    gap: 20px;
 }
 .project {
     display: flex;
@@ -212,22 +216,22 @@ body {
 .project:hover {
     transform: translate(-5px, -5px);
     transition: .5s;
-    box-shadow: 4px 4px 0px 2px #FBF9F1;
+    box-shadow: 4px 4px 0px 3px #FBF9F1;
 }
 
 .project img {
     height: 150px;
-    /* box-shadow: 5px 2px 0px #EEE0C9; */
 
 }
 .project h2 {
     font-family: "Quicksand", sans-serif;
     text-align: center;
-    color: black;
+    color: #31363F;
     margin: 0;
 }
 .project p {
     text-align:center;
+    color: #31363F;
 }
 .techstack {
     display: flex;

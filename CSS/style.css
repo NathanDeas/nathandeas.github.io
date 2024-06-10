@@ -86,6 +86,7 @@ body {
     position: absolute;
     visibility: hidden;
     opacity: 0%;
+    z-index: 3;
 }
 #proj_btn:hover,
 #cont_btn:hover,

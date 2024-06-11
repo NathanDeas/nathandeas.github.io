@@ -4,6 +4,7 @@ html, body {
     width: 100%;
     background-color: #E2DFD0;
     font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
 }
 body {
     display: flex;
@@ -162,7 +163,9 @@ body {
     transition: 2s;
     visibility: visible;
 }
-
+.skills_page.open {
+    transform: translateX(-150vw);
+}
 /*---------------------------------------------------------------project page------------------------------------------------------------- */
 .proj_page {
     display: flex;
@@ -355,7 +358,7 @@ body {
     background-color: #BCCEF8;
     z-index: 7;
     visibility: hidden;
-    top: -150vh;
+    right: -150vw;
     transition: 1s;
  }
  #skills_container {

@@ -156,6 +156,12 @@ body {
     margin-top: 30px;
     text-align: center;
 }
+.proj_page.open,
+.skills_page.open {
+    top: 0;
+    transition: 2s;
+    visibility: visible;
+}
 
 /*---------------------------------------------------------------project page------------------------------------------------------------- */
 .proj_page {
@@ -172,11 +178,6 @@ body {
     visibility: hidden;
     transition: 1s;
     z-index: 4;
-}
-.proj_page.open {
-    top: 0;
-    transition: 1.5s;
-    visibility: visible;
 }
 #project_container {
     display: flex;
@@ -307,7 +308,7 @@ body {
     color: #ffffff;
 }
 
-/* -----------------------------------------------Skills section-------------------------------------------------------------*/
+/* -----------------------------------------------contact section-------------------------------------------------------------*/
 #contact-container {
     position: absolute;
     top: 0;
@@ -346,31 +347,53 @@ body {
     border-radius: 20px;
 }
  /*----------------------------------------------skills ------------------------------------------------- */ 
- #skills_page {
+ .skills_page {
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: green;
+    max-width: 100%;
+    min-height: fit-content;
+    background-color: #BCCEF8;
     z-index: 7;
     visibility: hidden;
+    top: -150vh;
+    transition: 1s;
  }
  #skills_container {
-    margin-top: 50px;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    border: solid 5px;
- }
- #skills_container .skill{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content:center;
-    gap: 20px;
- }
-
- #skills_container .skill span {
-    border: solid blue;
+    flex-wrap: wrap;
+    max-width: 90vw;
+    width: 90vw;
     height: fit-content;
-    font-size: 2em;
+    min-height: 100vh;
+ }
+ #skills_container .page_title {
+    margin-bottom: 20px;
+ }
+ #skills_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+ }
+ #skills_content .skill {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    gap: 10px;
+    /* align-items: center; */
+ }
+ #skills_content .skill h2 {
+    margin: 0;
+    text-align: center;
+ }
+ #skills_content .skill span {
+    height: fit-content;
+    font-size: 1.5em;
+    height: fit-content;
+    background-color: #98A8F8;
+    border-radius: 10px;
+    text-align: center;
  }

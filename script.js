@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const skills = document.querySelector("#skills_btn");
     const resume = document.querySelector("#resume_btn");
     const hb = document.querySelector("#head_button");
+    const proj_page = document.querySelector(".proj_page");
+    const menu_box = document.querySelector(".menu_bar");
+    const skill_page = document.querySelector(".skills_page");
+    const close_page = document.querySelector(".close_page");
+    const contact = document.querySelector("#contact-container");
+    const info_c = document.querySelector("#contact-info");
+    const close_pages = document.querySelectorAll(".close_page");
 
     var expanded = false;
 
@@ -37,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         expanded = !expanded;
     });
 
-    var p_open = false;
-    const proj_page = document.querySelector(".proj_page");
-    const menu_box = document.querySelector(".menu_bar");
     proj.addEventListener("click", () => {
             proj_page.classList.add("open");
             expand.innerHTML = "Menu";
@@ -50,23 +54,39 @@ document.addEventListener("DOMContentLoaded", () => {
             expanded = !expanded;
             hb.classList.remove("show");
             menu_box.style = "opacity: 0; transition: 1s;";
-    })
+    });
 
-    const close_page = document.querySelector(".close_page");
-    close_page.addEventListener("click", () => {
-        proj_page.classList.remove("open");
-        expand.innerHTML = "Close";
-        toggleElement(proj, "100px", "show");
-        toggleElement(cont, "400px", "show");
-        toggleElement(skills, "200px", "show");
-        toggleElement(resume, "300px", "show");
-        hb.classList.add("show");
-        menu_box.style = "opacity: 100%; transition: 1s;";
+    skills.addEventListener("click", () => {
+        skill_page.classList.add("open");
+        expand.innerHTML = "Menu";
+        toggleElement(proj, "0", "hide");
+        toggleElement(cont, "0", "hide");
+        toggleElement(skills, "0", "hide");
+        toggleElement(resume, "0", "hide");
         expanded = !expanded;
-    })
+        hb.classList.remove("show");
+        menu_box.style = "opacity: 0; transition: 1s;";
+    });
 
-    const contact = document.querySelector("#contact-container");
-    const info_c = document.querySelector("#contact-info");
+    close_pages.forEach(close_page => {
+        close_page.addEventListener("click", () => {
+            if(proj_page.classList.contains("open")) {
+                proj_page.classList.remove("open");
+            }
+            if(skill_page.classList.contains("open")) {
+                skill_page.classList.remove("open");
+            }
+            expand.innerHTML = "Close";
+            toggleElement(proj, "100px", "show");
+            toggleElement(cont, "400px", "show");
+            toggleElement(skills, "200px", "show");
+            toggleElement(resume, "300px", "show");
+            hb.classList.add("show");
+            menu_box.style = "opacity: 100%; transition: 1s;";
+            expanded = !expanded;
+        });
+    });
+
     cont.addEventListener("click", () => {
         contact.classList.add("show");
     });

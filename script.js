@@ -12,8 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const contact = document.querySelector("#contact-container");
     const info_c = document.querySelector("#contact-info");
     const close_pages = document.querySelectorAll(".close_page");
+    const bod = document.querySelector("html");
+    const land_two = document.querySelector(".landing_page #second_flex");
 
     var expanded = false;
+    const what = document.querySelectorAll(".landing_page .test");
+    console.log(bod.clientHeight)
+    what.forEach((item, index) => {
+        var duration = Math.random() * (30 - 15) + 20;
+        var where = Math.random() * ((bod.clientHeight - 20) - 5) + 5;
+        var del = Math.random() * (20-0) + 0;
+        // var scale = Math.random() * (1.03 - 1) + 1;
+        item.style.top = `${where}px`;
+        // item.style.transform = `scale(${scale})`;
+        item.style.animation = `test-box ${duration}s linear infinite`;
+        item.style.animationDelay = `${del}s`;
+    });
 
     function toggleElement(element, transformValue, action) {
         if (action === 'show') {
@@ -53,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleElement(resume, "0", "hide");
             expanded = !expanded;
             hb.classList.remove("show");
+            land_two.classList.add("hide");
             menu_box.style = "opacity: 0; transition: 1s;";
     });
 
@@ -64,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleElement(skills, "0", "hide");
         toggleElement(resume, "0", "hide");
         expanded = !expanded;
+        land_two.classList.add("hide");
         hb.classList.remove("show");
         menu_box.style = "opacity: 0; transition: 1s;";
     });
@@ -72,9 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
         close_page.addEventListener("click", () => {
             if(proj_page.classList.contains("open")) {
                 proj_page.classList.remove("open");
+                land_two.classList.remove("hide");
             }
             if(skill_page.classList.contains("open")) {
                 skill_page.classList.remove("open");
+                land_two.classList.remove("hide");
             }
             expand.innerHTML = "Close";
             toggleElement(proj, "100px", "show");

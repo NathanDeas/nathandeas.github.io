@@ -2,9 +2,13 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #E2DFD0;
+    background: #0F6292;
+    background: radial-gradient(circle at center,#000D6B80 , transparent),
+    radial-gradient(ellipse at top,#9C19E0 , transparent),
+    #1E3163;
+    
     font-family: "Quicksand", sans-serif;
-    overflow-x: hidden;
+    background-attachment: fixed;
 }
 body {
     display: flex;
@@ -12,6 +16,36 @@ body {
     width: 100%;
     max-width: 100%;
     height: fit-content;
+    overflow-x: hidden;
+}
+.test {
+    height: 2vw;
+    width: 2vw;
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    background-color: none;
+    overflow: visible;
+    opacity: 0%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.test:hover {
+    background-color: white;
+}
+@keyframes test-box {
+    0% {
+        left: 90vw;
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 0%;
+        left: 0;
+        transform: rotate(360deg);
+    }
+    
 }
 .menu_bar {
     display: flex;
@@ -19,11 +53,13 @@ body {
     width: 7%;
     flex-direction: column;
     padding-top: 10px;
+    position: sticky;
 }
 #head_button a {
-    color: #153448;
+    color: #EEEEEE;
     text-decoration: none;
     font-size: 3em;
+    padding-top: 2vh;
 }
 #head_button {
     display: flex;
@@ -36,19 +72,43 @@ body {
     transition: 1s;
 }
 .menu_bar div {
+    color: white;
     text-align: center;
     height: 75px;
     width: 75px;
     font-size: 1.3em;
-    background-color: #f6f6f6;
+    background-color: #9B4444;
     border-radius: 50%;
     vertical-align: middle;
     line-height: 75px;
-    border: solid #ED634F 5px;
+    border: solid #EEEEEE 5px;
 }
 #menu_btn {
+    border-radius: 50%;
     z-index: 5;
     cursor: pointer;
+    animation-name: button_bob;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes button_bob {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 #proj_btn,
 #cont_btn,
@@ -96,7 +156,7 @@ body {
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-size: 2em;
-    color: #153448;
+    color: #EEEEEE;
     font-weight: 900;
     margin-left: 20px;
 }
@@ -110,6 +170,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px 0px;
+    transition: 2s;
+}
+#second_flex.hide {
+    transition: 2s;
+    opacity: 0%;
 }
 #about {
     font-family: "Quicksand", sans-serif;
@@ -117,24 +182,22 @@ body {
     font-size: 2em;
     text-align: center;
     padding: 20px;
-    color: #153448;
+    color: #EEEEEE;
 }
 #about span {
     font-size: 3em;
-    text-shadow: 2px 2px 1px #ED634F;
 }
 .img {
     height: fit-content;
-    border: dashed #ED634F 5px;
+    border: dashed #102C57 5px;
+    border-radius: 50%;
 }
 .img img {
     height: 300px;
     max-width: 100vw;
     align-content: center;
     margin: 20px;
-    background-color: #31363F;
-
-
+    border-radius: 50%;
 }
 .close_page {
     position: absolute;
@@ -174,7 +237,7 @@ body {
     width: 100%;
     height: fit-content;
     min-height: 100%;
-    background-color: #92C7CF;
+    background-color: none;
     top: -300vh;
     left: 0;
     justify-content: center;
@@ -191,9 +254,8 @@ body {
     margin-bottom: 50px;
 }
 #project_container .page_title {
-    text-shadow: 2px 2px 1px #FBF9F1;
-
-    
+    text-shadow: 2px 2px 1px #15F5BA;
+    color: #F0F3FF;
 }
 #project_box {
     display: flex;
@@ -212,7 +274,7 @@ body {
     max-width: 350px;
     min-width: 200px;
     border-radius: 10px;
-    background-color: #AAD7D9;
+    background-color: #836FFF;
     box-shadow: 1px 2px 0px .5px #FBF9F1;
     padding: 10px;
     transition: .5s;
@@ -230,12 +292,12 @@ body {
 .project h2 {
     font-family: "Quicksand", sans-serif;
     text-align: center;
-    color: #31363F;
+    color: #FBF9F1;
     margin: 0;
 }
 .project p {
     text-align:center;
-    color: #31363F;
+    color: #FBF9F1;
 }
 .techstack {
     display: flex;
@@ -355,7 +417,7 @@ body {
     width: 100%;
     max-width: 100%;
     min-height: fit-content;
-    background-color: #BCCEF8;
+    background-color: none;
     z-index: 7;
     visibility: hidden;
     right: -150vw;
@@ -400,3 +462,5 @@ body {
     border-radius: 10px;
     text-align: center;
  }
+
+ /*----------------------------------------------scrollbar ------------------------------------------------- */ 

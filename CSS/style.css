@@ -36,14 +36,16 @@ body {
     0% {
         left: 90vw;
         opacity: 0%;
+        transform: scale(var(--scale)) rotate(0deg);
     }
     50% {
         opacity: 50%;
+        transform: scale(var(--scale)) rotate(180deg);
     }
     100% {
         opacity: 0%;
         left: 0;
-        transform: rotate(360deg);
+        transform: scale(var(--scale)) rotate(360deg);
     }
     
 }
@@ -210,9 +212,6 @@ body {
     color: #fefefe;
     background: hsl(340deg 100% 32%);
     border-radius: 8px;
-}
-.close_page:hover {
-    cursor: pointer;
 }
 .page_title {
     font-family: "Quicksand", sans-serif;

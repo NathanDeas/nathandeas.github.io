@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const what = document.querySelectorAll(".landing_page .test");
     console.log(bod.clientHeight)
     what.forEach((item, index) => {
-        var duration = Math.random() * (30 - 15) + 20;
-        var where = Math.random() * ((bod.clientHeight - 20) - 5) + 5;
-        var del = Math.random() * (20-0) + 0;
-        // var scale = Math.random() * (1.03 - 1) + 1;
+        var duration = Math.random() * (40 - 30) + 20;
+        var where = Math.random() * ((bod.clientHeight - 100) - 5) + 5;
+        var del = Math.random() * (30-0) + 0;
+        var scale = index * 1.001;
         item.style.top = `${where}px`;
-        // item.style.transform = `scale(${scale})`;
+        item.style.setProperty('--scale', scale);
         item.style.animation = `test-box ${duration}s linear infinite`;
         item.style.animationDelay = `${del}s`;
     });

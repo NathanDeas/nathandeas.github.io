@@ -14,15 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const close_pages = document.querySelectorAll(".close_page");
     const bod = document.querySelector("html");
     const land_two = document.querySelector(".landing_page #second_flex");
+    const body = document.querySelector("body");
 
     var expanded = false;
     const what = document.querySelectorAll(".landing_page .test");
     console.log(bod.clientHeight)
     what.forEach((item, index) => {
         var duration = Math.random() * (40 - 30) + 20;
-        var where = Math.random() * ((bod.clientHeight - 100) - 5) + 5;
+        var where = Math.random() * ((bod.clientHeight - 150) - 5) + 5;
         var del = Math.random() * (30-0) + 0;
-        var scale = index * 1.001;
+        var scale = index * .5;
         item.style.top = `${where}px`;
         item.style.setProperty('--scale', scale);
         item.style.animation = `test-box ${duration}s linear infinite`;
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleElement(resume, "300px", "show");
             hb.classList.add("show");
         }
+
         expanded = !expanded;
     });
 
@@ -110,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     contact.addEventListener("click", (e) => {
+        body.style.overflow = "hidden";
         if (!info_c.contains(e.target))
             {
                 contact.classList.remove("show");

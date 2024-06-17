@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     what.forEach((item, index) => {
         var duration = Math.random() * (40 - 30) + 20;
         // var where = Math.random() * ((bod.clientHeight - 150) - 5) + 5;
-        var where = Math.random() * (90);
+        var where = Math.random() * (80);
         var del = Math.random() * (30-0) + 0;
         var scale = index * .5;
         item.style.top = `${where}vh`;
@@ -123,3 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open("Images/Resume_Nathan_Deas.pdf", "_blank");
     });
 });
+document.querySelectorAll(".img_container").forEach((container) => {
+    const gitLink = container.querySelector("a");
+  
+    container.addEventListener("mouseover", () => {
+        gitLink.classList.add("show");
+    });
+  
+    container.addEventListener("mouseleave", () => {
+        gitLink.classList.remove("show");
+    });
+  });

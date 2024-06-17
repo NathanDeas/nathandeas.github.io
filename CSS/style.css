@@ -234,7 +234,7 @@ a {
     visibility: visible;
 }
 .skills_page.open {
-    transform: translateX(-150vw);
+    transform: translateX(150vw);
 }
 /*---------------------------------------------------------------project page------------------------------------------------------------- */
 .proj_page {
@@ -452,7 +452,7 @@ a {
     background-color: none;
     z-index: 7;
     visibility: hidden;
-    right: -150vw;
+    left: -150vw;
     transition: 1s;
  }
  #skills_container {

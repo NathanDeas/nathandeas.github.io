@@ -17,6 +17,7 @@ body {
     max-width: 100%;
     height: fit-content;
     overflow-x: hidden;
+    position: relative;
 }
 .test {
     height: 2vw;

@@ -21,10 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(bod.clientHeight)
     what.forEach((item, index) => {
         var duration = Math.random() * (40 - 30) + 20;
-        var where = Math.random() * ((bod.clientHeight - 150) - 5) + 5;
+        // var where = Math.random() * ((bod.clientHeight - 150) - 5) + 5;
+        var where = Math.random() * (90);
         var del = Math.random() * (30-0) + 0;
         var scale = index * .5;
-        item.style.top = `${where}px`;
+        item.style.top = `${where}vh`;
         item.style.setProperty('--scale', scale);
         item.style.animation = `test-box ${duration}s linear infinite`;
         item.style.animationDelay = `${del}s`;

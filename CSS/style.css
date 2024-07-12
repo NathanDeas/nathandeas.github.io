@@ -16,7 +16,7 @@ body {
     width: 100%;
     max-width: 100%;
     height: fit-content;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
 }
 .test {
@@ -429,19 +429,50 @@ a {
 }
 
 #contact-info {
-    border: white solid 5px;
-    width: 500px;
-    height: 400px;
-    background-color: #7469B6;
+    width: fit-content;
+    height: 500px;
+    /* background-color: #27292E; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: white;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    /* border: solid #EEEE 2px; */
+    /* padding-left: 50px;
+    padding-right: 50px; */
 }
 #contact-info img{
-    height: 200px;
-    border-radius: 20px;
+    height: 400px;
+    /* margin-right: 10px; */
+    /* margin-bottom: 20px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#info-container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 50px; */
+    font-size: 2em;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 20px;
+    border-left: solid #25112B 10px;
+    background-color: #723985;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#c_title {
+    font-size: 2em;
+    text-align: center;
+    transform: skewX(-10DEG);
+    border-bottom: solid #EEEE;
+    border-left: solid #EEEE;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
  /*----------------------------------------------skills ------------------------------------------------- */ 
  .skills_page {
@@ -495,7 +526,7 @@ a {
     background-color: #98A8F8;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #EEEE;
  }
 
  /*----------------------------------------------scrollbar ------------------------------------------------- */ 

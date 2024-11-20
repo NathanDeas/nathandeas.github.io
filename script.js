@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
     });
     resume.addEventListener("click", () => {
-        window.open("Images/Resume_Nathan_Deas.pdf", "_blank");
+        window.open("Images/Nathan_Deas_Resume.pdf", "_blank");
     });
 });
 document.querySelectorAll(".img_container").forEach((container) => {

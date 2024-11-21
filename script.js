@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
             hb.classList.remove("show");
         } else {
             expand.innerHTML = "Close";
-            toggleElement(proj, "100px", "show");
-            toggleElement(cont, "400px", "show");
-            toggleElement(skills, "200px", "show");
-            toggleElement(resume, "300px", "show");
+            toggleElement(proj, "6vw", "show");
+            toggleElement(cont, "24vw", "show");
+            toggleElement(skills, "12vw", "show");
+            toggleElement(resume, "18vw", "show");
             hb.classList.add("show");
         }
 
@@ -98,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 land_two.classList.remove("hide");
             }
             expand.innerHTML = "Close";
-            toggleElement(proj, "100px", "show");
-            toggleElement(cont, "400px", "show");
-            toggleElement(skills, "200px", "show");
-            toggleElement(resume, "300px", "show");
+            toggleElement(proj, "6vw", "show");
+            toggleElement(cont, "24vw", "show");
+            toggleElement(skills, "12vw", "show");
+            toggleElement(resume, "18vw", "show");
             hb.classList.add("show");
             menu_box.style = "opacity: 100%; transition: 1s;";
             expanded = !expanded;

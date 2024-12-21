@@ -439,7 +439,7 @@ h2 {
 @media (max-width: 1200px) {
     .homepage .flex_body {
         flex-direction: column;
-        padding-top: 100px;
+        padding-top: 50px;
         font-size: 16px;
     }
     .flex_body .about {

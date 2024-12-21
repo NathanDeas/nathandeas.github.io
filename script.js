@@ -1,142 +1,77 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const expand = document.querySelector("#menu_btn");
-    const proj = document.querySelector("#proj_btn");
-    const cont = document.querySelector("#cont_btn");
-    const skills = document.querySelector("#skills_btn");
-    const resume = document.querySelector("#resume_btn");
-    const hb = document.querySelector("#head_button");
-    const proj_page = document.querySelector(".proj_page");
-    const menu_box = document.querySelector(".menu_bar");
-    const skill_page = document.querySelector(".skills_page");
-    const close_page = document.querySelector(".close_page");
-    const contact = document.querySelector("#contact-container");
-    const info_c = document.querySelector("#contact-info");
-    const close_pages = document.querySelectorAll(".close_page");
-    const bod = document.querySelector("html");
-    const land_two = document.querySelector(".landing_page #second_flex");
-    const body = document.querySelector("body");
+    const open_project = document.querySelector("#m_projects");
+    const open_skills = document.querySelector("#m_skills");
 
-    var expanded = false;
-    const what = document.querySelectorAll(".landing_page .test");
-    console.log(bod.clientHeight)
-    what.forEach((item, index) => {
+    const project_page = document.querySelector(".proj_page");
+    const skills_page = document.querySelector(".skills_page");
+
+    const homepage = document.querySelector(".homepage");
+
+    const close_pages = document.querySelectorAll(".close_page");
+    const resume = document.querySelector("#m_resume")
+    //CALCULATING HEIGHT OF ELEMENT
+    elemHeight = project_page.clientHeight;
+    project_page.style.setProperty('--top_pos', `-${elemHeight}px`)
+    console.log(elemHeight);
+
+    //BACKGROUND SQUARE ANIMATIONS
+    const shape = document.querySelectorAll(".background_motion .back_square");
+    shape.forEach((item, index) => {
         var duration = Math.random() * (40 - 30) + 20;
-        // var where = Math.random() * ((bod.clientHeight - 150) - 5) + 5;
-        var where = Math.random() * (80);
+        var where = Math.random() * (100);
         var del = Math.random() * (30-0) + 0;
         var scale = index * .5;
-        item.style.top = `${where}vh`;
+        item.style.left = `${where}vw`;
         item.style.setProperty('--scale', scale);
         item.style.animation = `test-box ${duration}s linear infinite`;
         item.style.animationDelay = `${del}s`;
     });
 
-    function toggleElement(element, transformValue, action) {
-        if (action === 'show') {
-            element.classList.add("show");
-            element.style.transform = `translateY(${transformValue})`;
-        } else {
-            element.classList.remove("show");
-            element.style.transform = "translateY(0)";
-        }
-    }
-
-    expand.addEventListener("click", () => {
-        if (expanded) {
-            expand.innerHTML = "Menu";
-            toggleElement(proj, "0", "hide");
-            toggleElement(cont, "0", "hide");
-            toggleElement(skills, "0", "hide");
-            toggleElement(resume, "0", "hide");
-            hb.classList.remove("show");
-        } else {
-            expand.innerHTML = "Close";
-            toggleElement(proj, "6vw", "show");
-            toggleElement(cont, "24vw", "show");
-            toggleElement(skills, "12vw", "show");
-            toggleElement(resume, "18vw", "show");
-            hb.classList.add("show");
-        }
-
-        expanded = !expanded;
-    });
-
-    proj.addEventListener("click", () => {
-            proj_page.classList.add("open");
-            expand.innerHTML = "Menu";
-            toggleElement(proj, "0", "hide");
-            toggleElement(cont, "0", "hide");
-            toggleElement(skills, "0", "hide");
-            toggleElement(resume, "0", "hide");
-            expanded = !expanded;
-            hb.classList.remove("show");
-            land_two.classList.add("hide");
-            menu_box.style = "opacity: 0; transition: 1s;";
-    });
-
-    skills.addEventListener("click", () => {
-        skill_page.classList.add("open");
-        expand.innerHTML = "Menu";
-        toggleElement(proj, "0", "hide");
-        toggleElement(cont, "0", "hide");
-        toggleElement(skills, "0", "hide");
-        toggleElement(resume, "0", "hide");
-        expanded = !expanded;
-        land_two.classList.add("hide");
-        hb.classList.remove("show");
-        menu_box.style = "opacity: 0; transition: 1s;";
-    });
-
-    close_pages.forEach(close_page => {
-        close_page.addEventListener("click", () => {
-            if(proj_page.classList.contains("open")) {
-                proj_page.classList.remove("open");
-                land_two.classList.remove("hide");
-            }
-            if(skill_page.classList.contains("open")) {
-                skill_page.classList.remove("open");
-                land_two.classList.remove("hide");
-            }
-            expand.innerHTML = "Close";
-            toggleElement(proj, "6vw", "show");
-            toggleElement(cont, "24vw", "show");
-            toggleElement(skills, "12vw", "show");
-            toggleElement(resume, "18vw", "show");
-            hb.classList.add("show");
-            menu_box.style = "opacity: 100%; transition: 1s;";
-            expanded = !expanded;
+    //GITHUB LINK ON PROJECTS PAGE
+    document.querySelectorAll(".img_container").forEach((container) => {
+        const gitLink = container.querySelector("a");
+      
+        container.addEventListener("mouseover", () => {
+            gitLink.classList.add("show");
         });
+      
+        container.addEventListener("mouseleave", () => {
+            gitLink.classList.remove("show");
+        });
+      });
+
+      //OPENING PROJECT PAGE
+      open_project.addEventListener("click", () => {
+        homepage.classList.add("transition_out");
+        project_page.classList.add("show");
+        // project_page.style.transform = `translateY(-${elemHeight}px)`;
+      });
+
+      open_skills.addEventListener("click", () => {
+        homepage.classList.add("transition_out");
+        skills_page.classList.add("show");
+        // project_page.style.transform = `translateY(-${elemHeight}px)`;
+      });
+
+      //CLOSING THE PAGE
+    close_pages.forEach((close_page) => { 
+        close_page.addEventListener("click", () => { 
+            if (project_page.classList.contains("show")) { 
+                project_page.classList.remove("show");
+                homepage.classList.remove("transition_out"); 
+            } 
+            if (skills_page.classList.contains("show")) { 
+                skills_page.classList.remove("show"); 
+                homepage.classList.remove("transition_out"); 
+            } 
+        }); 
     });
 
-    cont.addEventListener("click", () => {
-        contact.classList.add("show");
-    });
-
-    contact.addEventListener("click", (e) => {
-        body.style.overflow = "hidden";
-        if (!info_c.contains(e.target))
-            {
-                contact.classList.remove("show");
-            }
-    });
-    resume.addEventListener("click", () => {
+      //OPEN RESUME
+      resume.addEventListener("click", () => {
         window.open("Images/Nathan_Deas_Resume.pdf", "_blank");
     });
+
+    
+
 });
-document.querySelectorAll(".img_container").forEach((container) => {
-    const gitLink = container.querySelector("a");
-  
-    container.addEventListener("mouseover", () => {
-        gitLink.classList.add("show");
-    });
-  
-    container.addEventListener("mouseleave", () => {
-        gitLink.classList.remove("show");
-    });
-  });
-// var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-// if (isIOS) {
-//   console.log('This is a IOS device');
-// } else {
-//   console.log('This is Not a IOS device');
-// }

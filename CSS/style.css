@@ -445,8 +445,7 @@ h2 {
         max-width: 100%;
     }
     .menu_container div {
-        min-width: 45%;
-        max-width: 100%;
+        min-width: 40%
     }
     .homepage .menu_container {
         padding-top: 100px;
@@ -459,14 +458,13 @@ h2 {
     }
     .skills_content .skill {
         min-width: 90%;
-
+    }
+    .proj_page .project {
+        width: 90%;
     }
 }
 @media (max-width: 650px) {
     .menu_container div {
-        width: 100%
-    }
-    .proj_page .project {
-        width: 80%;
+        min-width: 100%
     }
 }

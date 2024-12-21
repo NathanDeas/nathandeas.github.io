@@ -436,6 +436,9 @@ h2 {
 
 /*--------------------------------------------------- VIEW FOR DIFFERENT PLATFORMS ---------------------------------------------------*/
 @media (max-width: 1200px) {
+    .homepage {
+        grid-template-rows: 5vh auto auto auto;
+    }
     .homepage .flex_body {
         flex-direction: column;
         font-size: 16px;

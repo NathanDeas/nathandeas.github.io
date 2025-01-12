@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const open_project = document.querySelector("#m_projects");
     const open_skills = document.querySelector("#m_skills");
+    const open_contact = document.querySelector("#m_contact");
 
     const project_page = document.querySelector(".proj_page");
     const skills_page = document.querySelector(".skills_page");
@@ -8,7 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const homepage = document.querySelector(".homepage");
 
     const close_pages = document.querySelectorAll(".close_page");
-    const resume = document.querySelector("#m_resume")
+    const resume = document.querySelector("#m_resume");
+
+
+    const contact_p = document.querySelector(".contact_page");
+    const backdrop = document.querySelector(".backdrop");
+
+
+
+
     //CALCULATING HEIGHT OF ELEMENT
     elemHeight = project_page.clientHeight;
     project_page.style.setProperty('--top_pos', `-${elemHeight}px`)
@@ -71,6 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
       resume.addEventListener("click", () => {
         window.open("Images/Nathan_Deas_Resume.pdf", "_blank");
     });
+
+    open_contact.addEventListener("click", () => {
+        contact_p.classList.add("show");
+        backdrop.style.visibility = "visible";
+    })
 
     
 

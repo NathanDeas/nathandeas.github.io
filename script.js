@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const contact_p = document.querySelector(".contact_page");
     const backdrop = document.querySelector(".backdrop");
 
+    const body_elem = document.querySelector("body");
+
 
 
 
@@ -76,6 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (contact_p.classList.contains("show")) { 
                 contact_p.classList.remove("show"); 
                 homepage.classList.remove("transition_out"); 
+                body_elem.classList.remove("scrolling");
+
             }
         }); 
     });
@@ -89,5 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     open_contact.addEventListener("click", () => {
         homepage.classList.add("transition_out");
         contact_p.classList.add("show");
+        body_elem.classList.add("scrolling");
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     });
 });

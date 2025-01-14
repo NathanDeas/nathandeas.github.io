@@ -216,27 +216,29 @@ button {
     opacity: 100%;
 }
 .close_page {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 25px;
     right: 25px;
-    width: 200px;
+    width: 75px;
     height: 75px;
     text-align: center;
     z-index: 5;
-    background-color:  #836FFF;
-    color: white;
-    font-size: 20px;
-    box-shadow: 1px 2px 0px .5px #FBF9F1;
+    background-image: url(../Images/home-button-white-icon.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border-radius: 50%;
     transition: .5s;
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.364);
+}
+.close_page:hover {
+    transition: .3s;
+    background-color: black;
+    filter: invert(100%);
+    cursor: pointer;
 }
 
-.close_page:hover {
-    cursor: pointer;
-    transform: translate(-5px, -5px);
-    transition: .5s;
-    box-shadow: 4px 4px 0px 3px #FBF9F1;
-}
 /*USED FOR SKILLS PAGE */
 .page_title {
     width: 100%;
@@ -437,72 +439,39 @@ h2 {
 /*--------------------------------------------------- CONTACT PAGE ---------------------------------------------------*/
 .contact_page {
     visibility: hidden;
-    position: fixed;
+    opacity: 0%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    opacity: 0%;
-    /* overflow: scroll; */
+    z-index: 10;
 }
 .contact_page.show {
     visibility: visible;
     opacity: 100%;
     transition: .5s;
-    overflow-y: hidden;
 }
-
-.backdrop {
-    visibility: hidden;
-    position: fixed;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    opacity: 80%;
-    backdrop-filter: blur(30px);
-}
-
 .contact_container {
-    position: absolute;
-    top: 0;
-    transform: translate(50%, 50%);
-    width: 50vw;
-    min-width: 200px;
-    height: fit-content;
-    background-color: #3e1a51;
-    opacity: 100%;
+    position:absolute;
+    width: 800px;
+    height: 400px;
+    backdrop-filter: blur(8px);
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -400px;
+    color: white;
+    box-shadow: 0px 0px 20px 10px rgba(59, 53, 61, 0.677);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 6;
 }
 .contact_info {
     display: flex;
-    flex-direction: column;
-    height: 100%;
     flex-grow: 1;
-}
-.contact_info h1 {
-    color: white;
-    margin: 0;
-    width:100%;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
-    margin-bottom: 50px;
-}
-.contact_info span {
-    font-size: 20px;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-.contact_info span:nth-child(odd) {
-    margin-bottom: 10px;
-
+    flex-direction: column;
+    align-items: center;
+    border: solid green;
 }
 
 
@@ -525,12 +494,6 @@ h2 {
     .homepage .menu_container {
         padding-top: 100px;
     }
-    .close_page {
-        height: 50px;
-        width: 100px;
-        font-size: 16px;
-        top: 5px;
-    }
     .skills_content .skill {
         min-width: 90%;
     }
@@ -539,13 +502,7 @@ h2 {
     }
     .menu_container div {
         height: 150px;
-    }
-    .contact_container {
-
-        transform: translate(50%, 15%);
-
-    }
-    
+    } 
 }
 @media (max-width: 650px) {
     .menu_container div {

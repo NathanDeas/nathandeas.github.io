@@ -73,6 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 skills_page.classList.remove("show"); 
                 homepage.classList.remove("transition_out"); 
             } 
+            if (contact_p.classList.contains("show")) { 
+                contact_p.classList.remove("show"); 
+                homepage.classList.remove("transition_out"); 
+            }
         }); 
     });
 
@@ -81,11 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open("Images/Nathan_Deas_Resume.pdf", "_blank");
     });
 
+
     open_contact.addEventListener("click", () => {
+        homepage.classList.add("transition_out");
         contact_p.classList.add("show");
-        backdrop.style.visibility = "visible";
-    })
-
-    
-
+    });
 });

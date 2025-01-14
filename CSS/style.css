@@ -465,14 +465,45 @@ h2 {
     box-shadow: 0px 0px 20px 10px rgba(59, 53, 61, 0.677);
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
 }
 .contact_info {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
-    border: solid green;
 }
+.contact_container img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.contact_info h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.contact_info span {
+    font-size: 30px;
+}
+.contact_info span:nth-child(odd){
+    margin-bottom: 20px;
+}
+.name_icon {
+    filter: invert(100%);
+    background-size: cover;
+    background-image: url(../Images/user.png);
+}
+.email_icon {
+    filter: invert(100%);
+    background-size: cover;
+    background-image:url(../Images/email.png);
+}
+.phone_icon {
+    filter: invert(100%);
+    background-size: cover;
+    background-image:url(../Images/phone-call.png);
+}
+
+
 
 
 
@@ -503,6 +534,25 @@ h2 {
     .menu_container div {
         height: 150px;
     } 
+}
+@media (max-width: 850px) {
+    .contact_container {
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;   
+        width: 300px; 
+        margin-left: -150px;
+    }
+    .contact_container img {
+        width: 300px;
+        border-radius: 10px;
+    }
+    .contact_info h1 {
+        font-size: 30px;
+    }
+    .contact_info span {
+        font-size: 20px;
+    }
 }
 @media (max-width: 650px) {
     .menu_container div {

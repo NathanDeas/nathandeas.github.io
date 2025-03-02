@@ -237,7 +237,7 @@ button {
 }
 .close_page:hover {
     transition: .3s;
-    background-color: black;
+    background-color: #63e61f;
     filter: invert(100%);
     cursor: pointer;
 }
@@ -469,6 +469,7 @@ h2 {
     flex-direction: row;
     border-radius: 10px;
     box-shadow: 5px 5px 0px 0px white;
+    border: solid white 1px;
 }
 .contact_info {
     display: flex;
@@ -505,9 +506,6 @@ h2 {
     background-size: cover;
     background-image:url(../Images/phone-call.png);
 }
-
-
-
 
 
 /*--------------------------------------------------- VIEW FOR DIFFERENT PLATFORMS ---------------------------------------------------*/

@@ -128,11 +128,11 @@ button {
     backdrop-filter: blur(5px);
 }
 
-.flex_body .portriat {
+.flex_body .portrait {
     height: fit-content;
     border-radius: 50%;
 }
-.portriat img {
+.portrait img {
     border-radius: 50%;
 }
 
@@ -169,7 +169,7 @@ button {
     cursor: pointer;
     background-color: #E0FFFF;
     color: #000000;
-    transition: .5;
+    transition: .5s;
     
 }
 
@@ -207,7 +207,7 @@ button {
     z-index: 4;
     top: var(--top_pos);
     visibility: hidden;
-    transition: .5S;
+    transition: .5s;
     opacity: 0%;
 
 }
@@ -260,7 +260,7 @@ button {
 .proj_page .project {
     border: solid white;
     width: 40%;
-    height: 500px;
+    min-height: 500px;
     border-radius: 10px;
     text-align: center;
     background-color: #836FFF;
@@ -271,7 +271,6 @@ button {
     transition: .5s;
 }
 .proj_page .project:hover {
-    box-shadow: 1px 2px 0px .5px #FBF9F1;
     transform: translate(-5px, -5px);
     transition: .5s;
     box-shadow: 4px 4px 0px 3px #FBF9F1;

@@ -39,17 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //GITHUB LINK ON PROJECTS PAGE
-    document.querySelectorAll(".img_container").forEach((container) => {
-        const gitLink = container.querySelector("a");
+    // document.querySelectorAll(".img_container").forEach((container) => {
+    //     const gitLink = container.querySelector("a");
       
-        container.addEventListener("mouseover", () => {
-            gitLink.classList.add("show");
-        });
+    //     container.addEventListener("mouseover", () => {
+    //         gitLink.classList.add("show");
+    //     });
       
-        container.addEventListener("mouseleave", () => {
-            gitLink.classList.remove("show");
-        });
-      });
+    //     container.addEventListener("mouseleave", () => {
+    //         gitLink.classList.remove("show");
+    //     });
+    //   });
 
       //OPENING PROJECT PAGE
       open_project.addEventListener("click", () => {

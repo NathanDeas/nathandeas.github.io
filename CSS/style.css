@@ -311,7 +311,8 @@ text-align: center;
     line-height: 1.55; 
     font-weight: 300; 
     padding: 20px 35px; 
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: solid white;
 }
 
 .techstack {
@@ -322,11 +323,24 @@ text-align: center;
     justify-content: center;
     margin-top: 20px;
 }
+
+.techstack h3 {
+    width: 100%;
+    color:white;
+}
 .techstack span{
     padding: 5px;
     border-radius: 10px;
     height: fit-content;
+    margin-bottom: 20px;
 } 
+
+.techstack .tech_sub_cats {
+    color: white;
+    border-right: solid white;
+    border-radius: 0;
+    margin-right: 5px;
+}
 
 /* ----------------------------------------------- PROJECT ICONS-------------------------------------------------------------*/
 

@@ -401,6 +401,32 @@ text-align: center;
     background: linear-gradient(to bottom right, #959595 0%, #959595 33%, #626262 33%, #626262 66%, #000000 66%, #000000 100%);
     color: #ffffff;
 }
+.techstack .react {
+    background: linear-gradient(
+        to bottom right,
+        #61dafb 0%,   /* React blue */
+        #61dafb 33%,
+        #21a1f1 33%, /* darker React blue */
+        #21a1f1 66%,
+        #0d47a1 66%, /* deep blue */
+        #0d47a1 100%
+    );
+    color: #ffffff;
+}
+.techstack .aspnetcore {
+    background: linear-gradient(
+        to bottom right,
+        #512bd4 0%,   /* .NET purple */
+        #512bd4 33%,
+        #6c63ff 33%,  /* lighter purple */
+        #6c63ff 66%,
+        #0078d7 66%,  /* Microsoft blue */
+        #0078d7 100%
+    );
+    color: #ffffff;
+}
+
+
 .img_container {
     position: relative;
     padding: 0;

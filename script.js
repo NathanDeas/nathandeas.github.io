@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //OPEN RESUME
       resume.addEventListener("click", () => {
-        window.open("Images/Nathan_Deas_Resume.pdf", "_blank");
+        window.open("Images/Resume-Nathan-Deas.pdf", "_blank");
     });
 
 

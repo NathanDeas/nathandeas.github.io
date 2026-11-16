@@ -167,7 +167,7 @@ button {
 }
 .menu_container div:hover {
     cursor: pointer;
-    background-color: #E0FFFF;
+    background-color: #e0ffff85;
     color: #000000;
     transition: .5s;
     
@@ -232,14 +232,16 @@ button {
     background-size: cover;
     background-color: transparent;
     border-radius: 50%;
-    transition: .5s;
-    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.364);
-}
-.close_page:hover {
     transition: .3s;
-    background-color: #63e61f;
-    filter: invert(100%);
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.46);
+    opacity: 50%;
+}
+
+.close_page:hover {
+    opacity: 100%;
+    transition: .3s;
     cursor: pointer;
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.46);
 }
 
 /*USED FOR SKILLS PAGE */
@@ -490,13 +492,20 @@ text-align: center;
     padding: 30px;
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
+.skill h2 {
+    width: 100%;
+}
 .skill span {
-    border: solid white;
+    border: solid white 1px;
     color: white;
     padding: 10px;
-    margin-right: 5px;
+    margin: 5px;
     font-size: 20px;
 }
 /*--------------------------------------------------- CONTACT PAGE ---------------------------------------------------*/

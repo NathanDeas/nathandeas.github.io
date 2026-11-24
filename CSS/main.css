@@ -1,0 +1,19 @@
+@view-transition {
+    navigation: auto;
+}
+body {
+    background: radial-gradient(circle at center,#000D6B80 , transparent),
+    radial-gradient(ellipse at top,#9C19E0 , transparent),
+    #1E3163;
+    background-attachment: fixed;
+    color: white;
+}
+
+body a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+body a:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+# Old site files kept locally for reference during the rebuild
+# (the originals are still on main)
+old/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+*.code-workspace
+
+# Logs and temp files
+*.log
+*.tmp
